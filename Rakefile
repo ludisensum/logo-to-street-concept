@@ -18,6 +18,8 @@ task :default do
 end
 
 task :publish do
+  system 'git checkout master'
+  system 'ember build'
   system 'git checkout gh-pages'
 
   Dir['*'].each { |file|
