@@ -72,11 +72,11 @@ define("app/router",
     var config = __dependency2__["default"];
 
     var Router = Ember.Router.extend({
-      location: config.locationType,
-      rootUrl: '/logo-to-street-concept/'
+      location: config.locationType
     });
 
     Router.map(function() {
+      this.resource('main', { path: '/logo-to-street-concept' });
     });
 
     __exports__["default"] = Router;
@@ -91,7 +91,7 @@ define("app/templates/application",
       var stack1;
 
 
-      stack1 = helpers._triageMustache.call(depth0, "street-scene", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+      stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
       if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
       else { data.buffer.push(''); }
       
@@ -107,7 +107,23 @@ define("app/templates/components/street-scene",
       
 
 
-      data.buffer.push("<div id=\"street\"><img src=\"luse-open.png\" /><img src=\"logo.png\" style=\"position: absolute; left: 530px; top: 90px; width: 150px\" /></div><img src=\"question.png\" />");
+      data.buffer.push("<div id=\"street\"><img src=\"logo-to-street-concept/luse-open.png\" /><img src=\"logo-to-street-concept/logo.png\" style=\"position: absolute; left: 530px; top: 90px; width: 150px\" /></div><img src=\"logo-to-street-concept/question.png\" />");
+      
+    });
+  });
+define("app/templates/main", 
+  ["exports"],
+  function(__exports__) {
+    "use strict";
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    this.compilerInfo = [4,'>= 1.0.0'];
+    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+      var stack1;
+
+
+      stack1 = helpers._triageMustache.call(depth0, "street-scene", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+      else { data.buffer.push(''); }
       
     });
   });
