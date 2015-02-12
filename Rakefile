@@ -27,4 +27,7 @@ task :publish do
   }
   system "git rm -rf #{files * ' '}" # so I can see errors...
   system 'mv dist/* .'
+  system 'git add -A'
+  system 'git commit -m upd'
+  system 'git push origin master gh-pages' # ok
 end
