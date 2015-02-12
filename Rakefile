@@ -26,4 +26,5 @@ task :publish do
     file !~ /gitignore|dist|node_modules|bower_components|tmp/
   }
   system "git rm -rf #{files * ' '}" # so I can see errors...
+  system 'mv dist/* .'
 end
