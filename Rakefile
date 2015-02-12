@@ -23,7 +23,7 @@ task :publish do
   system 'git checkout gh-pages'
 
   files = Dir['*'].select { |file|
-    file !~ /gitignore|dist/
+    file !~ /gitignore|dist|node_modules/
   }
   system "git rm -rf #{files * ' '}"
 end
