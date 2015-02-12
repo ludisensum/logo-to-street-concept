@@ -72,7 +72,8 @@ define("app/router",
     var config = __dependency2__["default"];
 
     var Router = Ember.Router.extend({
-      location: config.locationType
+      location: config.locationType,
+      rootUrl: '/logo-to-street-concept/'
     });
 
     Router.map(function() {
