@@ -23,7 +23,7 @@ task :publish do
   system 'git checkout gh-pages'
 
   files = Dir['*'].select { |file|
-    file !~ /gitignore|dist|node_modules|bower_components/
+    file !~ /gitignore|dist|node_modules|bower_components|tmp/
   }
-  system "git rm -rf #{files * ' '}"
+  system "git rm -rf #{files * ' '}" # so I can see errors...
 end
