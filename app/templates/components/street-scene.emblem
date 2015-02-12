@@ -1,4 +1,4 @@
 #street
   img src='luse-open.png'
-  img src='logo.png' style=''
+  img src='logo.png' style='position: absolute; left: 530px; top: 90px; width: 150px'
 img src='question.png'
