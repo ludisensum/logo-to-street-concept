@@ -1,0 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+html {
+  background-color: #4d4d4d; }
+
+#street {
+  position: relative; }
+
+.street-scene {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
