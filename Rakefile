@@ -22,9 +22,8 @@ task :publish do
   system 'ember build'
   system 'git checkout gh-pages'
 
-  Dir['*'].each { |file|
-    next if file =~ /gitignore|dist/
-    system "rm -rf #{file}"
+  files = Dir['*'].select { |file|
+    file !~ /gitignore|dist/
   }
-
+  system "git rm -rf #{files * ' '}"
 end
