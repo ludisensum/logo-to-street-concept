@@ -30,4 +30,6 @@ task :publish do
   system 'git add -A'
   system 'git commit -m upd'
   system 'git push origin master gh-pages' # ok
+  system 'git rm -rf *'
+  system 'git checkout master -f'
 end
